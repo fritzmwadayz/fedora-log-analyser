@@ -10,7 +10,7 @@ This of course means that in case of logs with a different structure unlike that
 
 Anyway now that I had the logs the next problem was sorting them.
 
-'''
+```
 import subprocesss
 
 output = subprocess.run(
@@ -20,14 +20,14 @@ output = subprocess.run(
 )
 
 logs = output.stdout
-'''
+```
 
 ## Day 2 - Working on the logs:
 The logs have a couple of characteristics that could be of interest. These include month, process and priority.
 
 I decided to start with sorting by month first since it was the most straight forward thing. The month is usually the first detail of the logs. So the script would extract the month from the log and for each entry that month is mentioned it would increment a counter. When this part was complete a simple table showing month and message count would be printed.
 
-'''
+```
 lines = logs.split("\n")
 
 counts = {}
@@ -55,12 +55,12 @@ print("-------------")
 
 for month, count in month_counts.items():
     print(f"{month}    {count}")
-'''
+```
 
 ## Day 3 - Still working on the logs:
 Sorting by month has been successfull but is unfortunately not helpful for any proper or at least somewhat good log analysis. To improve on that I needed to now sort by process. I would go about that using python string operations as I had done before.
 
-'''
+```
 print("Some bad stuff could happen")
 
 processes = set()
@@ -86,6 +86,6 @@ for line in lines:
 
 for process in sorted(processes):
     print(process)
-'''
+```
 
 However there are too many processes and I would need to streamline this leading to the creation of process classifications.
