@@ -89,3 +89,15 @@ for process in sorted(processes):
 ```
 
 However there are too many processes and I would need to streamline this leading to the creation of process classifications.
+
+# Day 4 - Upgraded the script to use json
+The previous method to extract and store logs had a major downside. It's a human readable version and lacks a some fields that are necessary for the new form of sort i.e by priority, that I wanted to implement. This operation does however use a lot of memory while executing. Otherwise not too many observations made yet. On to the next.
+
+```py
+# Updated journalctl call
+output = subprocess.run(
+    ["journalctl", "--output=json", "--no-pager"],
+    capture_output=True,
+    text=True
+)
+```
