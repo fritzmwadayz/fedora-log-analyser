@@ -1,4 +1,4 @@
-# Engineering Notes – Log Analyzer
+# Notes – Log Analyzer
 
 ## Day 1 – Getting Started.
 First I used the python subprocess module to execute the journalctl command.
