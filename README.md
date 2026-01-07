@@ -1,1 +1,1 @@
-A simple wrapper for fedora's jouranlctl to easy log querying and visualization.
+A simple log analysing tool for fedora os.
