@@ -101,3 +101,6 @@ output = subprocess.run(
     text=True
 )
 ```
+
+# Day 5 - Major Update (It seems)
+Now the script has taken the form of a wrapper for journalctl. The previous method consumed a lot of memory and was just not efficient enough to take this script to a new level.
